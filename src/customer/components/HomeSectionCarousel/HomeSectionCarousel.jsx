@@ -25,6 +25,7 @@ function HomeSectionCarousel({ data ,sectionName }) {
           disableDotsControls
           onSlideChange={syncActiveIndex}
           activeIndex={activeIndex}
+          
         />
       </div>
     </div>
