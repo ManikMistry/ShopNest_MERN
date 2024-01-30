@@ -235,7 +235,7 @@ export default function Navigation() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <span className="sr-only">Your Company</span>
-                <p className=" font-bold uppercase text-blue-400">Shop Nest</p>
+                <p className=" font-bold uppercase text-blue-400 cursor-pointer">Shop Nest</p>
               </div>
 
               {/* Flyout menus */}

@@ -16,7 +16,7 @@ function HomeSectionCarousel({ data ,sectionName }) {
     .map((item) => <HomeSectionCard product={item} />);
   return (
     <div className="border pt-4">
-    <h2 className=" text-2xl font-extrabold text-gray-800 py-5">{sectionName}</h2>
+    <h2 className=" text-2xl font-extrabold text-gray-800 py-5 pl-10">{sectionName}</h2>
       <div className=" relative pl-20 lg:pl-24">
         <AliceCarousel
           items={items}
