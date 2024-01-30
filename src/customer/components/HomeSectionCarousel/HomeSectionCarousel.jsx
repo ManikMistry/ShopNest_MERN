@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
-import { Button } from "@mui/material";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 function HomeSectionCarousel({ data ,sectionName }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const responsive = {
@@ -10,8 +8,6 @@ function HomeSectionCarousel({ data ,sectionName }) {
     720: { items: 4 },
     1024: { items: 5 },
   };
-  const slidePrev = () => setActiveIndex(activeIndex - 1);
-  const slideNext = () => setActiveIndex(activeIndex + 1);
 
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
@@ -30,40 +26,6 @@ function HomeSectionCarousel({ data ,sectionName }) {
           onSlideChange={syncActiveIndex}
           activeIndex={activeIndex}
         />
-        {activeIndex !== items.length - 5 && (
-          <Button
-            className="z-50"
-            onClick={slidePrev}
-            sx={{
-              position: "absolute",
-              top: "8rem",
-              right: "0rem",
-              transform: "translateX(50%)",
-              rotate: "90deg",
-              borderRadius: "15px",
-            }}
-            aria-label="next"
-          >
-            <KeyboardArrowRightIcon sx={{ rotate: "-90deg" }} />
-          </Button>
-        )}
-        {activeIndex !== 0 && (
-          <Button
-            className="z-50"
-            onClick={slideNext}
-            sx={{
-              position: "absolute",
-              top: "8rem",
-              left: "0rem",
-              transform: "translateX(50%)",
-              rotate: "90deg",
-              borderRadius: "15px",
-            }}
-            aria-label="next"
-          >
-            <KeyboardArrowRightIcon sx={{ rotate: "90deg" }} />
-          </Button>
-        )}
       </div>
     </div>
   );
