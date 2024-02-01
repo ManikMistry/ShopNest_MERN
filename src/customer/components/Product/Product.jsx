@@ -34,7 +34,7 @@ export default function Product() {
   return (
     <div className="bg-white">
       <div>
-        {/* Mobile filter dialog */}
+        {/* MOBILE FILTER DIALOG */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog
             as="div"
@@ -78,7 +78,7 @@ export default function Product() {
                     </button>
                   </div>
 
-                  {/* Filters */}
+                  {/* FILTERS */}
                   <form className="mt-4 border-t border-gray-200">
                     {filters.map((section) => (
                       <Disclosure
@@ -220,7 +220,7 @@ export default function Product() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
-              {/* Filters */}
+              {/* FILTER */}
               <form className="hidden lg:block">
                 {filters.map((section) => (
                   <Disclosure
@@ -342,7 +342,7 @@ export default function Product() {
                 ))}
               </form>
 
-              {/* Product grid */}
+              {/* PRODUCT GRID*/}
               <div className="lg:col-span-4 w-full">
                 <div className=" flex flex-wrap justify-center bg-white py-5">
                   {mens_kurta.map((item) => (

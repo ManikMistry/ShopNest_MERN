@@ -1,7 +1,7 @@
-import React from "react"
-import './ProductCard.css'
+import React from "react";
+import "./ProductCard.css";
 
-function ProductCard({product}) {
+function ProductCard({ product }) {
   return (
     <>
       <div className="productCard w-[15rem] m-3 transition-all cursor-pointer">
