@@ -316,6 +316,7 @@ export default function Product() {
                                   defaultValue="female"
                                   name="radio-buttons-group"
                                 >
+                                {/* WORK PENDING */}
                                   <FormControlLabel
                                     value="female"
                                     control={<Radio />}
