@@ -9,12 +9,15 @@ import {
 import { navigation } from "./navigationData";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { purple } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigate=useNavigate();
+
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
@@ -32,6 +35,7 @@ export default function Navigation() {
     setOpenAuthModal(false);
   };
   const handleCategoryClick = (category, section, item, close) => {
+    navigate(`/${category.id}/${section.id}/${item.id}`)
     close();
   };
   return (
